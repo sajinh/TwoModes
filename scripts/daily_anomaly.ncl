@@ -10,7 +10,7 @@ load "$SysE/lib/ncl/data_analysis_helpers.ncl"
 begin
   var="olr"
   infile=var+"_fill.nc"
-  outfile=var+"_hig.nc"
+  outfile=var+"_anom.nc"
 
   nhar = 4 ; number of harmonics to be used to construct annual cycle
 
