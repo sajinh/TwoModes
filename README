@@ -1,0 +1,4 @@
+Scripts used in the forthcoming paper on the two modes of ISO variability
+
+1. scripts/daily_anomaly.ncl = calculate the daily anomaly of a given
+daily data set by removing annual cycle
