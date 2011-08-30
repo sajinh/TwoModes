@@ -9,13 +9,14 @@ load "$SysE/lib/ncl/data_analysis_helpers.ncl"
 ; This climatology is removed from the data to yield daily anomalies
 begin
   var="olr"
-  infile=var+"_fill.nc"
+  infile="/home/saji/Data/"+var+"_fill.nc"
   outfile=var+"_anom.nc"
 
   nhar = 4 ; number of harmonics to be used to construct annual cycle
 
   fin=addfile(infile,"r")
-  varx=fin->$var$(:,{-30:30},{40:120})
+  varx0=fin->$var$(:,{-30:30},{40:120})
+  varx=short2flt(varx0)
   time=varx&time
   ntim=dimsizes(time)
 
